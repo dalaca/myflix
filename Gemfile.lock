@@ -71,7 +71,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.3.4)
     multi_json (1.10.1)
-    pg (0.17.0)
+    pg (0.18.1)
     polyglot (0.3.5)
     pry (0.9.12.3)
       coderay (~> 1.0)
@@ -161,7 +161,7 @@ DEPENDENCIES
   database_cleaner (= 1.2.0)
   haml-rails
   jquery-rails
-  pg
+  pg (= 0.18.1)
   pry
   pry-nav
   rails (= 4.1.1)
