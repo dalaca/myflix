@@ -1,7 +1,7 @@
 class VideosController < ApplicationController
 
   def index
-    @video = Video.all
+    #@video = Video.all
     @category = Category.all
   end
 

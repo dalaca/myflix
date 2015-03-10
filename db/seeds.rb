@@ -39,7 +39,7 @@ occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
 anim id est laborum.",
 small_img_url: "/tmp/battlestar-galactica-small.jpg",
 large_img_url: "/tmp/battlestar-galactica-large.jpg",
-category_id: [5]
+category_id: 5
 },
 {
 title: "Power Ranges In Space",
