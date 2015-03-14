@@ -10,6 +10,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'pg', '0.18.1'
 
+
 group :development do
   gem 'thin'
   gem "better_errors"
@@ -24,6 +25,7 @@ end
 
 group :test do
   gem 'database_cleaner', '1.2.0'
+  gem 'shoulda-matchers'
 end
 
 group :production do
