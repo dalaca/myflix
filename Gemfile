@@ -9,6 +9,8 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'pg', '0.18.1'
+gem 'bcrypt'
+gem 'bootstrap_form'
 
 
 group :development do
