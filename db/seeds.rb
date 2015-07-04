@@ -144,18 +144,17 @@ anim id est laborum.",
 small_img_url: "/tmp/storage-wars-small.jpg",
 large_img_url: "/tmp/storage-wars-large.jpg",
 category_id: 3
-},
-{
-title: "The Walking Dead",
-description: "Lorem ipsum dolor sit amet, consectetur adipisicing
+}])
+twd = Video.create( title: "The Walking Dead", description: "Lorem ipsum dolor sit amet, consectetur adipisicing
 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
 voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
 occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-anim id est laborum.",
-small_img_url: "/tmp/the-walking-dead-small.jpg",
-large_img_url: "/tmp/the-walking-dead-large.jpg",
-category_id: 1
-}
-])
+anim id est laborum.", small_img_url: "/tmp/the-walking-dead-small.jpg", large_img_url: "/tmp/the-walking-dead-large.jpg",
+category_id: 1)
+dave = User.create(full_name: "David A Cardoso", password: "password", email: "d@c.com")
+
+Review.create(user: dave, video: twd, rating: 5, content: "Awesome")
+Review.create(user: dave, video: twd, rating: 2, content: "Too Gruesome")
+
