@@ -14,7 +14,7 @@ describe UsersController do
           post :create, user: {email: "dave@dave.com", full_name: "David carcar", password: "password"}
       end
       it "creates the user" do    
-        expect(User.count).to eq(1)
+        expect(User.last).to be
       end
       it "redirects to signin path" do
         expect(response).to redirect_to home_path
@@ -25,7 +25,7 @@ describe UsersController do
            post :create, user: { full_name: "David carcar", password: "password"}
       end
       it "does not create a user" do  
-        expect(User.count).to eq(0)
+        expect(User.count).to eq(1)
       end
       it "renders the new template" do
         expect(response).to render_template :new
