@@ -37,9 +37,17 @@ describe SessionsController do
         post :create, email: alice.email, password: alice.password + "assds", full_name: alice.full_name
         expect(session[:user_id]).to be_nil
       end
-      it "redirects to sign in page"
-      it "shows an error message"
+      it "redirects to sign in page" do
+        alice = Fabricate(:user)
+        post :create, email: alice.email, password: alice.password + "assds", full_name: alice.full_name
+        expect(response).to redirect_to root_path
+      end
+      it "shows an error message" do
+         alice = Fabricate(:user)
+        post :create, email: alice.email, password: alice.password + "assds", full_name: alice.full_name
+        expect(flash[:error]).to be_truthy
 
+      end
     end
   end
 end

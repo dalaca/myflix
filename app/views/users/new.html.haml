@@ -9,5 +9,6 @@
           = f.password_field :password
           = f.text_field :full_name, label: "Full Name"
           = f.form_group do
-            = f.submit "Sign up"          
+            = f.submit "Sign up" 
+            = link_to "Forgot Password?", forgot_password_path          
 

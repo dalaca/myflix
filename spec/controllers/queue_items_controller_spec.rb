@@ -29,7 +29,7 @@ describe QueueItemsController  do
       set_current_user(alice)
       video = Fabricate(:video)
       post :create, video_id: video.id
-      expect(QueueItem.count).to eq(8)
+      expect(QueueItem.count).to eq(1)
     end
     it "creates the queue item that is associated with the video" do
       alice = Fabricate(:user)
@@ -84,7 +84,7 @@ describe QueueItemsController  do
       set_current_user(alice)
       queue_item = Fabricate(:queue_item, user: alice)
       delete :destroy, id: queue_item.id
-      expect(QueueItem.count).to eq(7)
+      expect(QueueItem.count).to eq(0)
     end
     it  "does not delete the queue item if the queue item is not in the current users queue" do
       alice = Fabricate(:user)
@@ -92,7 +92,7 @@ describe QueueItemsController  do
       session[:user_id] = alice.id
       queue_item = Fabricate(:queue_item, user: bob)
       delete :destroy, id: queue_item.id
-      expect(QueueItem.count).to eq(8)
+      expect(QueueItem.count).to eq(1)
     end
 
     

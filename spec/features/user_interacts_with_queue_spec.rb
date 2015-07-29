@@ -28,7 +28,6 @@ feature "User interats with the queue" do
     fill_in "video_#{south_park.id}", with: 1
     fill_in "video_#{futurama.id}", with: 2
     click_button "update Instant Queue"
-
   expect(find("#video_#{monk.id}").value).to eq("3")
   expect(find("#video_#{south_park.id}").value).to eq("1")
   expect(find("#video_#{futurama.id}").value).to eq("2")
